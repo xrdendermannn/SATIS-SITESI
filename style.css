@@ -1,0 +1,229 @@
+		::-webkit-scrollbar{
+			width: 0;
+		}
+		#scrollum{
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 10px;
+			height: 100%;
+			background-color: rgba(0,0,0,0.05);
+		}
+		#progress{
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 10px;
+			height: 100%;
+			background: linear-gradient(to top, #008aff, #00ffe7);
+			animation: animate 5s linear infinite ;
+		}
+		@keyframes animate{
+			0%,100%{filter: hue-rotate(0deg);}
+			50%{filter: hue-rotate(360deg);}
+		}
+		#progress:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to top, #008aff, #00ffe7);
+			filter: blur(10px);
+		}
+		#progress:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to top, #008aff, #00ffe7);
+			filter: blur(30px);
+		}
+
+/* CSS files add styling rules to your content */
+#menu{
+    top: 0;
+    width: 99.3%;
+    height: 9%;
+    background-color: #2c2f33;
+    position: fixed;
+    z-index: 100;
+}
+
+body{
+  margin: 0;
+  background-color: #222;
+  color: #fff;
+}
+
+#urunarama{
+    background-color: #23272a;
+    border: 0;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    margin: 10px 0 10px 0;
+    right: 10px;
+    padding-left: 10px;
+}
+
+#logo{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    top: -10px;
+    cursor: pointer;
+}
+
+.menuler{
+    position: absolute;
+    width: 130px;
+    font-size: 20px;
+    height: 40px;
+    background: #23272a;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px 0 10px 0;
+    color: lime;
+    font-family: 'Rubik', sans-serif;
+}
+
+.menuler:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.menuler1{
+  left: 90px;
+}
+.menuler2{
+  left: 230px;
+}
+.menuler3{
+  left: 370px;
+}
+
+
+
+
+
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    transform-style: preserve-3d;
+    margin: 70px;
+}
+
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    background: #303030;
+}
+.container .box .name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    trasform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    font-family: 'Rubik', sans-serif;
+    z-index: 10;
+}
+
+.container .box:hover .name{
+    top: 60px;
+    font-family: 'Rubik', sans-serif;
+    opacity: 1;
+}
+
+.container .box .product{
+    opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    font-family: 'Rubik', sans-serif;
+    height: 90%;
+    max-width: 300px;
+    transition: 0.5s;
+    z-index: 11;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,0px);
+}
+
+.container .box .buy{
+    position: absolute;
+    left: 1px;
+    bottom: 0;
+    left: 80px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: #fff;
+    background: #333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+} 
+
+.container .box .fiyat{
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: #fff;
+    background: #333;
+    padding: 10px 25px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+    background: #9bdc28;
+} 
+
+.container .box:hover .fiyat{
+    bottom: 40px;
+    right: -20px;
+    opacity: 1;
+}
+
+.container .box:hover .buy{
+    bottom: 40px;
+    left: 90px;
+    opacity: 1;
+    animation: animasyon 5s linear infinite;
+}
+
+.container .box .buy{
+    background: #9bdc28;
+}
+@keyframes animasyon{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
